@@ -1,0 +1,56 @@
+{
+  "name": "api-declr",
+  "description": "API Declr provides a declarative way to to implement schema-enforced API endpoints in Node.js backend projects. Written in TypeScript. Supports multiple web frameworks.",
+  "author": {
+    "name": "Tej Birring",
+    "email": "tejbirring@gmail.com"
+  },
+  "license": "ISC",
+  "repository": "github:TejBirringTM/api-declr",
+  "version": "0.0.0",
+  "files": [
+    "out"
+  ],
+  "main": "out/index.js",
+  "types": "out/index.d.ts",
+  "scripts": {
+    "build": "rm -rf out && npm run validate && tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "validate": "npm run lint && npm run type-check",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "web",
+    "server",
+    "service",
+    "framework",
+    "http",
+    "hateoas",
+    "validation",
+    "validate",
+    "schema",
+    "request",
+    "response",
+    "backend"
+  ],
+  "dependencies": {
+    "zod": "^3.25.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.3.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
+  }
+}

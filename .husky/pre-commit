@@ -1,0 +1,2 @@
+echo "Pre-commit check...\n"
+tsc && npm run validate

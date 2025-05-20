@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# output
+out/
+
+# misc
+.DS_Store
+*.pem
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

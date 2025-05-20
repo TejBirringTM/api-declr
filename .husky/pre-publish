@@ -1,0 +1,2 @@
+echo "Pre-publish check...\n"
+git diff --quiet || (echo 'Error: Uncommitted changes' && exit 1)
