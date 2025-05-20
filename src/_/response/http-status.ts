@@ -11,6 +11,7 @@ export const httpStatusMap = {
         statusCode: 200,
         category: "SUCCESS",
         body: "required",
+        optionalHeaders: ["etag"],
         requiredHeaders: [],
     },
     CREATED: {
@@ -18,6 +19,7 @@ export const httpStatusMap = {
         statusCode: 201,
         category: "SUCCESS",
         body: "required",
+        optionalHeaders: ["etag"],
         requiredHeaders: ["location"],
     },
     ACCEPTED: {
@@ -25,6 +27,7 @@ export const httpStatusMap = {
         statusCode: 202,
         category: "SUCCESS",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     NON_AUTHORITATIVE_INFORMATION: {
@@ -32,6 +35,7 @@ export const httpStatusMap = {
         statusCode: 203,
         category: "SUCCESS",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     NO_CONTENT: {
@@ -39,6 +43,7 @@ export const httpStatusMap = {
         statusCode: 204,
         category: "SUCCESS",
         body: "never",
+        optionalHeaders: ["etag"],
         requiredHeaders: [],
     },
     RESET_CONTENT: {
@@ -46,6 +51,7 @@ export const httpStatusMap = {
         statusCode: 205,
         category: "SUCCESS",
         body: "never",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     PARTIAL_CONTENT: {
@@ -53,6 +59,7 @@ export const httpStatusMap = {
         statusCode: 206,
         category: "SUCCESS",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["content-range"],
     },
     MULTI_STATUS: {
@@ -60,6 +67,7 @@ export const httpStatusMap = {
         statusCode: 207,
         category: "SUCCESS",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     ALREADY_REPORTED: {
@@ -67,6 +75,7 @@ export const httpStatusMap = {
         statusCode: 208,
         category: "SUCCESS",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     IM_USED: {
@@ -74,6 +83,7 @@ export const httpStatusMap = {
         statusCode: 226,
         category: "SUCCESS",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     MULTIPLE_CHOICES: {
@@ -81,6 +91,7 @@ export const httpStatusMap = {
         statusCode: 300,
         category: "REDIRECT",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     MOVED_PERMANENTLY: {
@@ -88,6 +99,7 @@ export const httpStatusMap = {
         statusCode: 301,
         category: "REDIRECT",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: ["location"],
     },
     FOUND: {
@@ -95,6 +107,7 @@ export const httpStatusMap = {
         statusCode: 302,
         category: "REDIRECT",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: ["location"],
     },
     SEE_OTHER: {
@@ -102,6 +115,7 @@ export const httpStatusMap = {
         statusCode: 303,
         category: "REDIRECT",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: ["location"],
     },
     NOT_MODIFIED: {
@@ -109,6 +123,7 @@ export const httpStatusMap = {
         statusCode: 304,
         category: "REDIRECT",
         body: "never",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     USE_PROXY: {
@@ -116,6 +131,7 @@ export const httpStatusMap = {
         statusCode: 305,
         category: "REDIRECT",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: ["location"],
     },
     TEMPORARY_REDIRECT: {
@@ -123,6 +139,7 @@ export const httpStatusMap = {
         statusCode: 307,
         category: "REDIRECT",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: ["location"],
     },
     PERMANENT_REDIRECT: {
@@ -130,6 +147,7 @@ export const httpStatusMap = {
         statusCode: 308,
         category: "REDIRECT",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: ["location"],
     },
     BAD_REQUEST: {
@@ -137,6 +155,7 @@ export const httpStatusMap = {
         statusCode: 400,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     UNAUTHORIZED: {
@@ -144,6 +163,7 @@ export const httpStatusMap = {
         statusCode: 401,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["www-authenticate"],
     },
     PAYMENT_REQUIRED: {
@@ -151,6 +171,7 @@ export const httpStatusMap = {
         statusCode: 402,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     FORBIDDEN: {
@@ -158,6 +179,7 @@ export const httpStatusMap = {
         statusCode: 403,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     NOT_FOUND: {
@@ -165,6 +187,7 @@ export const httpStatusMap = {
         statusCode: 404,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     METHOD_NOT_ALLOWED: {
@@ -172,6 +195,7 @@ export const httpStatusMap = {
         statusCode: 405,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["allow"],
     },
     NOT_ACCEPTABLE: {
@@ -179,6 +203,7 @@ export const httpStatusMap = {
         statusCode: 406,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     PROXY_AUTHENTICATION_REQUIRED: {
@@ -186,6 +211,7 @@ export const httpStatusMap = {
         statusCode: 407,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["proxy-authenticate"],
     },
     REQUEST_TIMEOUT: {
@@ -193,6 +219,7 @@ export const httpStatusMap = {
         statusCode: 408,
         category: "CLIENT_ERROR",
         body: "optional",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     CONFLICT: {
@@ -200,6 +227,7 @@ export const httpStatusMap = {
         statusCode: 409,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     GONE: {
@@ -207,6 +235,7 @@ export const httpStatusMap = {
         statusCode: 410,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     LENGTH_REQUIRED: {
@@ -214,6 +243,7 @@ export const httpStatusMap = {
         statusCode: 411,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     PRECONDITION_FAILED: {
@@ -221,6 +251,7 @@ export const httpStatusMap = {
         statusCode: 412,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     PAYLOAD_TOO_LARGE: {
@@ -228,6 +259,7 @@ export const httpStatusMap = {
         statusCode: 413,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     URI_TOO_LONG: {
@@ -235,6 +267,7 @@ export const httpStatusMap = {
         statusCode: 414,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     UNSUPPORTED_MEDIA_TYPE: {
@@ -242,6 +275,7 @@ export const httpStatusMap = {
         statusCode: 415,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     RANGE_NOT_SATISFIABLE: {
@@ -249,6 +283,7 @@ export const httpStatusMap = {
         statusCode: 416,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["content-range"],
     },
     EXPECTATION_FAILED: {
@@ -256,6 +291,7 @@ export const httpStatusMap = {
         statusCode: 417,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     // IM_A_TEAPOT: {
@@ -270,6 +306,7 @@ export const httpStatusMap = {
         statusCode: 421,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     UNPROCESSABLE_ENTITY: {
@@ -277,6 +314,7 @@ export const httpStatusMap = {
         statusCode: 422,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     LOCKED: {
@@ -284,6 +322,7 @@ export const httpStatusMap = {
         statusCode: 423,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     FAILED_DEPENDENCY: {
@@ -291,6 +330,7 @@ export const httpStatusMap = {
         statusCode: 424,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     TOO_EARLY: {
@@ -298,6 +338,7 @@ export const httpStatusMap = {
         statusCode: 425,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     UPGRADE_REQUIRED: {
@@ -305,6 +346,7 @@ export const httpStatusMap = {
         statusCode: 426,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["upgrade"],
     },
     PRECONDITION_REQUIRED: {
@@ -312,6 +354,7 @@ export const httpStatusMap = {
         statusCode: 428,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     TOO_MANY_REQUESTS: {
@@ -319,6 +362,7 @@ export const httpStatusMap = {
         statusCode: 429,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["retry-after"],
     },
     REQUEST_HEADER_FIELDS_TOO_LARGE: {
@@ -326,6 +370,7 @@ export const httpStatusMap = {
         statusCode: 431,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     UNAVAILABLE_FOR_LEGAL_REASONS: {
@@ -333,6 +378,7 @@ export const httpStatusMap = {
         statusCode: 451,
         category: "CLIENT_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     INTERNAL_SERVER_ERROR: {
@@ -340,6 +386,7 @@ export const httpStatusMap = {
         statusCode: 500,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     NOT_IMPLEMENTED: {
@@ -347,6 +394,7 @@ export const httpStatusMap = {
         statusCode: 501,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     BAD_GATEWAY: {
@@ -354,6 +402,7 @@ export const httpStatusMap = {
         statusCode: 502,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     SERVICE_UNAVAILABLE: {
@@ -361,6 +410,7 @@ export const httpStatusMap = {
         statusCode: 503,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: ["retry-after"],
     },
     GATEWAY_TIMEOUT: {
@@ -368,6 +418,7 @@ export const httpStatusMap = {
         statusCode: 504,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     HTTP_VERSION_NOT_SUPPORTED: {
@@ -375,6 +426,7 @@ export const httpStatusMap = {
         statusCode: 505,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     VARIANT_ALSO_NEGOTIATES: {
@@ -382,6 +434,7 @@ export const httpStatusMap = {
         statusCode: 506,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     INSUFFICIENT_STORAGE: {
@@ -389,6 +442,7 @@ export const httpStatusMap = {
         statusCode: 507,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     LOOP_DETECTED: {
@@ -396,6 +450,7 @@ export const httpStatusMap = {
         statusCode: 508,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     NOT_EXTENDED: {
@@ -403,6 +458,7 @@ export const httpStatusMap = {
         statusCode: 510,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     NETWORK_AUTHENTICATION_REQUIRED: {
@@ -410,6 +466,7 @@ export const httpStatusMap = {
         statusCode: 511,
         category: "SERVER_ERROR",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
 } as const satisfies _HttpStatusMap;
@@ -423,6 +480,7 @@ export type _HttpStatusMap = {
         statusCode: number;
         category: HttpStatusCategory;
         body: BasicCardinality;
+        optionalHeaders: Array<HttpResponseHeaderKey>;
         requiredHeaders: Array<HttpResponseHeaderKey>;
     };
 };

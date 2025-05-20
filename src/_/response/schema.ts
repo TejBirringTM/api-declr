@@ -18,6 +18,10 @@ import type {
  */
 export type ApiResponseHeaders<Status extends HttpStatus> = {
     [K in HttpResponseHeaderKeysFromArray<
+        HttpStatusMap[Status]["optionalHeaders"]
+    >]?: HttpResponseHeaderValueFromKey<K>;
+} & {
+    [K in HttpResponseHeaderKeysFromArray<
         HttpStatusMap[Status]["requiredHeaders"]
     >]: HttpResponseHeaderValueFromKey<K>;
 } & {

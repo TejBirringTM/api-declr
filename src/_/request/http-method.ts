@@ -20,36 +20,43 @@ export const httpMethodsMap = {
     GET: {
         method: "GET",
         body: "never",
+        optionalHeaders: ["if-none-match"],
         requiredHeaders: [],
     },
     DELETE: {
         method: "DELETE",
         body: "never",
+        optionalHeaders: ["if-match"],
         requiredHeaders: [],
     },
     HEAD: {
         method: "HEAD",
         body: "never",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     OPTIONS: {
         method: "OPTIONS",
         body: "never",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     POST: {
         method: "POST",
         body: "required",
+        optionalHeaders: [],
         requiredHeaders: [],
     },
     PUT: {
         method: "PUT",
         body: "required",
+        optionalHeaders: ["if-match"],
         requiredHeaders: [],
     },
     PATCH: {
         method: "PATCH",
         body: "required",
+        optionalHeaders: ["if-match"],
         requiredHeaders: [],
     },
 } as const satisfies _HttpMethodsMap;
@@ -61,6 +68,7 @@ export type _HttpMethodsMap = {
     [M in HttpMethod]: {
         method: HttpMethod;
         body: BasicCardinality;
+        optionalHeaders: Array<HttpRequestHeaderKey>;
         requiredHeaders: Array<HttpRequestHeaderKey>;
     };
 };

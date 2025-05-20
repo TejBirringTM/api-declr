@@ -76,11 +76,8 @@ export type HttpRequestHeaderKey =
 /**
  * Convert an array type of request header keys to a union type of request header keys.
  */
-export type HttpRequestHeaderKeysFromArray<
-    KeysArray extends
-        | Array<HttpRequestHeaderKey>
-        | ReadonlyArray<HttpRequestHeaderKey>,
-> = ValueOf<KeysArray>;
+export type HttpRequestHeaderKeysFromArray<T> =
+    T extends Array<HttpRequestHeaderKey> ? ValueOf<T> : never;
 
 /**
  * Get the value type for a particular request header key.

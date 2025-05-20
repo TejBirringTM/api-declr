@@ -90,11 +90,8 @@ export type HttpResponseHeaderKey =
 /**
  * Convert an array type of response header keys to a union type of response header keys.
  */
-export type HttpResponseHeaderKeysFromArray<
-    KeysArray extends
-        | Array<HttpResponseHeaderKey>
-        | ReadonlyArray<HttpResponseHeaderKey>,
-> = ValueOf<KeysArray>;
+export type HttpResponseHeaderKeysFromArray<T> =
+    T extends Array<HttpResponseHeaderKey> ? ValueOf<T> : never;
 
 /**
  * Get the value type for a particular response header key.

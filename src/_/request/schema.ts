@@ -8,7 +8,7 @@ import type {
 import type { Optional } from "../types";
 import type {
     HttpRequestHeaderKey,
-    // HttpRequestHeaderKeysFromArray,
+    HttpRequestHeaderKeysFromArray,
     HttpRequestHeaders,
     HttpRequestHeaderValueFromKey,
 } from "./http-headers";
@@ -18,11 +18,15 @@ import type {
  * this includes mandatory headers for the given HTTP response status
  * and optional headers to specify in addition.
  */
-export type ApiRequestHeaders<Method extends HttpMethod> = /* {
+export type ApiRequestHeaders<Method extends HttpMethod> = {
+    [K in HttpRequestHeaderKeysFromArray<
+        HttpMethodsMap[Method]["optionalHeaders"]
+    >]?: HttpRequestHeaderValueFromKey<K>;
+} /* & {
     [K in HttpRequestHeaderKeysFromArray<
         HttpMethodsMap[Method]["requiredHeaders"]
     >]: HttpRequestHeaderValueFromKey<K>;
-} & */ {
+} */ & {
     [K in HttpRequestHeaderKey]?: HttpRequestHeaderValueFromKey<K>;
 };
 
